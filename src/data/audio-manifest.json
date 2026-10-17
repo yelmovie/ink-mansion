@@ -1,0 +1,32 @@
+{
+  "bgm-maintheme": {
+    "path": "/audio/maintheme.mp3",
+    "type": "audio",
+    "loop": true
+  },
+  "bgm-stage1": {
+    "path": "/audio/stage1.mp3",
+    "type": "audio",
+    "loop": true
+  },
+  "bgm-stage2": {
+    "path": "/audio/stage2.mp3",
+    "type": "audio",
+    "loop": true
+  },
+  "bgm-stage3": {
+    "path": "/audio/stage3.mp3",
+    "type": "audio",
+    "loop": true
+  },
+  "bgm-stage4": {
+    "path": "/audio/stage4.mp3",
+    "type": "audio",
+    "loop": true
+  },
+  "bgm-stage5": {
+    "path": "/audio/stage5.mp3",
+    "type": "audio",
+    "loop": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "note": "초등 국어 6학년 1학기 「이야기를 간추려요」의 이야기 구조 4단계. 중·고등의 5단계(발단-전개-위기-절정-결말)와 다르므로 학년을 올릴 때만 바꾼다.",
+  "targetTotalChars": 1200,
+  "targetNote": "A4 1장 · 12pt · 줄간 160% · 여백 20mm 기준 약 1,180자(공백 포함). 글자 수는 공백을 포함해 센다.",
+  "minTotalChars": 400,
+  "minNote": "다음 방으로 넘어가는 통과 최소치. 목표(1200자)는 게이지로만 권장하고 진행을 막지 않는다 — 업체 피드백(0825) 반영. 단계당 100자 수준.",
+  "stages": [
+    {
+      "id": "exposition",
+      "label": "발단",
+      "short": "이야기의 시작",
+      "guide": "인물과 장소가 나오고 사건이 시작돼요",
+      "ask": "누가, 어디에서, 무슨 일이 시작되나요?",
+      "targetChars": 250,
+      "icon": "magnifier"
+    },
+    {
+      "id": "development",
+      "label": "전개",
+      "short": "사건이 커짐",
+      "guide": "사건이 커지고 문제가 생겨요",
+      "ask": "어떤 문제가 생겼나요? 주인공은 무엇을 하나요?",
+      "targetChars": 350,
+      "icon": "link"
+    },
+    {
+      "id": "climax",
+      "label": "절정",
+      "short": "가장 긴장되는 순간",
+      "guide": "가장 긴장되는 순간이에요",
+      "ask": "가장 아슬아슬한 순간은 언제인가요?",
+      "targetChars": 350,
+      "icon": "question"
+    },
+    {
+      "id": "resolution",
+      "label": "결말",
+      "short": "이야기의 끝",
+      "guide": "문제가 풀리고 이야기가 끝나요",
+      "ask": "이야기는 어떻게 끝나나요?",
+      "targetChars": 250,
+      "icon": "book"
+    }
+  ]
+}

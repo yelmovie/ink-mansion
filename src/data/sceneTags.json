@@ -1,0 +1,10 @@
+[
+  { "id": "tag-discover", "label": "발견", "question": "무엇을 처음 알게 되는 장면인가요?", "fx": { "tint": "#f5d98a", "camera": "spotlight", "particle": "sparkle", "desaturate": false, "shake": false } },
+  { "id": "tag-conflict", "label": "갈등", "question": "누구와 누구의 마음이 부딪히나요?", "fx": { "tint": "#d4645c", "camera": "push", "particle": "ember", "desaturate": false, "shake": true } },
+  { "id": "tag-chase", "label": "추적", "question": "누가 무엇을 쫓고 있나요?", "fx": { "tint": "#4fd6c0", "camera": "pan", "particle": "speed", "desaturate": false, "shake": true } },
+  { "id": "tag-dialog", "label": "대화", "question": "이 대화에서 서로 알게 되는 것은 무엇인가요?", "fx": { "tint": "#e8b44a", "camera": "still", "particle": "none", "desaturate": false, "shake": false } },
+  { "id": "tag-memory", "label": "회상", "question": "언제의 기억으로 돌아가나요?", "fx": { "tint": "#9a91b8", "camera": "slow", "particle": "dust", "desaturate": true, "shake": false } },
+  { "id": "tag-choice", "label": "선택", "question": "무엇과 무엇 사이에서 고민하나요?", "fx": { "tint": "#c9a7ff", "camera": "still", "particle": "orbit", "desaturate": false, "shake": false } },
+  { "id": "tag-twist", "label": "반전", "question": "무엇이 뒤집히는 순간인가요?", "fx": { "tint": "#7f5cff", "camera": "flip", "particle": "burst", "desaturate": false, "shake": true } },
+  { "id": "tag-emotion", "label": "감정", "question": "주인공의 마음은 지금 어떤 색인가요?", "fx": { "tint": "#ff9ecb", "camera": "breathe", "particle": "glow", "desaturate": false, "shake": false } }
+]

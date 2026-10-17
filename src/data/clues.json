@@ -1,0 +1,386 @@
+[
+  {
+    "id": "clue-key-old",
+    "name": "낡은 열쇠",
+    "category": "object",
+    "assetId": "clue-key-old",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "이 열쇠는 어떤 문을 열 수 있을까요? 아니면 아무 문도 열지 못할까요?",
+      "열쇠에 달린 파란 보석은 왜 붙어 있을까요?"
+    ],
+    "desc": "손잡이가 닳은 낡은 열쇠야. 이 저택 어느 문에도 맞지 않아."
+  },
+  {
+    "id": "clue-letter-sealed",
+    "name": "봉인된 편지",
+    "category": "record",
+    "assetId": "clue-letter-sealed",
+    "inspectMode": "rub",
+    "observationQuestions": [
+      "누가 누구에게 보낸 편지일까요?",
+      "발바닥 모양 밀랍 봉인은 무엇을 뜻할까요?"
+    ],
+    "desc": "아직 뜯지 않은 편지야. 봉인 위에 이름이 적혀 있어야 할 자리가 비어 있어."
+  },
+  {
+    "id": "clue-footprints",
+    "name": "발자국 기록",
+    "category": "trace",
+    "assetId": "clue-footprints",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "두 발자국은 같은 시간에 찍힌 걸까요?",
+      "발자국은 어디로 향하고 있나요?"
+    ],
+    "desc": "바닥에 남은 발자국이야. 들어온 자국은 있는데 나간 자국이 없어."
+  },
+  {
+    "id": "clue-portrait-dog",
+    "name": "강아지 초상화",
+    "category": "character",
+    "assetId": "clue-portrait-dog",
+    "inspectMode": "slide",
+    "observationQuestions": [
+      "초상화 속 강아지는 누구일까요?",
+      "액자 뒤에 숨겨진 장치는 무엇을 움직일까요?"
+    ],
+    "desc": "강아지를 그린 초상화야. 그림 속 강아지가 보는 쪽마다 조금씩 달라 보여."
+  },
+  {
+    "id": "clue-journal-open",
+    "name": "펼쳐진 수첩",
+    "category": "record",
+    "assetId": "clue-journal-open",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "수첩 주인은 무엇을 조사하고 있었을까요?",
+      "지도에 표시된 곳은 어디일까요?"
+    ],
+    "desc": "펼쳐진 수첩이야. 마지막 장이 글 쓰는 중간에 뚝 끊겨 있어."
+  },
+  {
+    "id": "clue-drawer-open",
+    "name": "열린 서랍",
+    "category": "place",
+    "assetId": "clue-drawer-open",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "서랍은 왜 열린 채로 있을까요?",
+      "서랍 속 물건 중 무엇이 가장 이상한가요?"
+    ],
+    "desc": "서랍 하나가 열려 있어. 안은 비었는데 먼지 자국만 네모나게 남았어."
+  },
+  {
+    "id": "clue-keepsake-box",
+    "name": "유품 상자",
+    "category": "object",
+    "assetId": "clue-keepsake-box",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "상자 속 물건들의 주인은 한 사람일까요?",
+      "부서진 밀랍 조각은 원래 무엇이었을까요?"
+    ],
+    "desc": "누군가 아끼던 물건을 모아 둔 상자야. 뚜껑 안쪽이 반들반들해."
+  },
+  {
+    "id": "clue-inkbottle",
+    "name": "은하 잉크병",
+    "category": "object",
+    "assetId": "prop-inkbottle-galaxy",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "이 잉크로 쓴 글에는 어떤 일이 일어날까요?",
+      "잉크병은 왜 여기 놓여 있을까요?"
+    ],
+    "desc": "별빛 같은 잉크가 든 병이야. 아무리 써도 잉크가 줄지 않아."
+  },
+  {
+    "id": "clue-quill",
+    "name": "리본 달린 깃펜",
+    "category": "object",
+    "assetId": "prop-quill-magic",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "깃펜의 주인은 어떤 사람일까요?",
+      "보라 리본은 왜 묶여 있을까요?"
+    ],
+    "desc": "리본이 묶인 깃펜이야. 잡으면 살짝 따뜻해."
+  },
+  {
+    "id": "clue-storybook",
+    "name": "달빛 이야기책",
+    "category": "record",
+    "assetId": "prop-storybook",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "이 책의 마지막 장에는 무엇이 적혀 있을까요?",
+      "표지의 달과 잉크병은 무슨 관계일까요?"
+    ],
+    "desc": "달빛을 받으면 글자가 떠오르는 책이야. 마지막 장만 하얗게 비어 있어."
+  },
+  {
+    "id": "clue-lantern",
+    "name": "꺼지지 않는 랜턴",
+    "category": "place",
+    "assetId": "prop-wall-lantern",
+    "inspectMode": "listen",
+    "observationQuestions": [
+      "랜턴은 누가 계속 켜 두는 걸까요?",
+      "불꽃이 흔들릴 때 어떤 소리가 나나요?"
+    ],
+    "desc": "꺼지지 않는 랜턴이야. 아무리 눌러도 안 꺼지고, 안에 배터리도 없어."
+  },
+  {
+    "id": "clue-magic-lens",
+    "name": "별자리 확대경",
+    "category": "object",
+    "assetId": "prop-magic-lens",
+    "inspectMode": "rub",
+    "observationQuestions": [
+      "이 확대경으로만 보이는 것이 있다면 무엇일까요?",
+      "발바닥 별자리는 무엇을 가리킬까요?"
+    ],
+    "desc": "들여다보면 별자리가 겹쳐 보이는 확대경이야. 글자를 보면 다른 글자가 비쳐."
+  },
+  {
+    "id": "clue-case-file",
+    "name": "묶인 사건 파일",
+    "category": "record",
+    "assetId": "prop-case-file",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "파일은 왜 리본으로 단단히 묶여 있을까요?",
+      "가장 위 서류에는 무엇이 적혀 있을까요?"
+    ],
+    "desc": "끈으로 묶인 사건 파일이야. 가운데 몇 장이 뜯겨 나갔어."
+  },
+  {
+    "id": "clue-hourglass",
+    "name": "은하 모래시계",
+    "category": "time",
+    "assetId": "prop-hourglass",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "모래시계의 모래는 어느 방향으로 흐르고 있나요?",
+      "시계가 가리키는 시각은 언제일까요?"
+    ],
+    "desc": "은하가 흐르는 모래시계야. 다 떨어져도 저절로 다시 뒤집혀."
+  },
+  {
+    "id": "clue-curtain",
+    "name": "창가의 커튼",
+    "category": "place",
+    "assetId": "prop-curtain-window",
+    "inspectMode": "slide",
+    "observationQuestions": [
+      "커튼 뒤에서 무엇이 보이나요?",
+      "누군가 방금까지 여기 서 있었다면 무엇을 보고 있었을까요?"
+    ],
+    "desc": "창가에 걸린 커튼이야. 바람이 없는데 한쪽만 계속 흔들려."
+  },
+  {
+    "id": "clue-mansion-model",
+    "name": "저택 모형",
+    "category": "place",
+    "assetId": "prop-mansion-ext",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "모형과 실제 저택은 어디가 다를까요?",
+      "발바닥 문장은 어느 가문의 표시일까요?"
+    ],
+    "desc": "이 저택을 그대로 줄인 모형이야. 모형에만 있는 방이 하나 더 있어."
+  },
+  {
+    "id": "clue-theater-masks",
+    "name": "두 개의 가면",
+    "category": "character",
+    "assetId": "prop-theater-masks",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "웃는 가면과 우는 가면, 누가 쓰던 것일까요?",
+      "가면 뒤 얼굴은 어떤 표정일까요?"
+    ],
+    "desc": "웃는 가면과 우는 가면이야. 둘이 항상 서로를 마주 보고 있어."
+  },
+  {
+    "id": "clue-signpost",
+    "name": "세 갈래 이정표",
+    "category": "place",
+    "assetId": "prop-signpost",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "세 방향 중 어느 쪽이 가장 궁금한가요?",
+      "이정표는 누가 세웠을까요?"
+    ],
+    "desc": "길이 셋으로 갈라지는 이정표야. 세 팻말 모두 글씨가 지워졌어."
+  },
+  {
+    "id": "clue-amulet",
+    "name": "열쇠구멍 부적",
+    "category": "object",
+    "assetId": "prop-secret-amulet",
+    "inspectMode": "rub",
+    "observationQuestions": [
+      "부적 속 눈은 무엇을 지켜보고 있을까요?",
+      "열쇠구멍에 맞는 열쇠는 어디 있을까요?"
+    ],
+    "desc": "열쇠구멍 모양이 새겨진 부적이야. 귀에 대면 아주 작은 소리가 나."
+  },
+  {
+    "id": "clue-globe",
+    "name": "이상한 지구본",
+    "category": "place",
+    "assetId": "prop-world-globe",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "지구본에서 반짝이는 곳은 어디인가요?",
+      "장소 링과 시간 링이 가리키는 조합은 무엇일까요?"
+    ],
+    "desc": "돌려 볼 수 있는 지구본이야. 어느 나라에도 없는 섬이 하나 그려져 있어."
+  },
+  {
+    "id": "clue-story-chest",
+    "name": "잠긴 이야기 상자",
+    "category": "object",
+    "assetId": "prop-story-chest",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "상자에서 새어 나오는 종이는 어떤 이야기일까요?",
+      "물음표 자물쇠는 어떻게 열 수 있을까요?"
+    ],
+    "desc": "단단히 잠긴 상자야. 흔들면 종이 넘기는 소리가 들려."
+  },
+  {
+    "id": "clue-flying-books",
+    "name": "떠다니는 책들",
+    "category": "trace",
+    "assetId": "prop-flying-books",
+    "inspectMode": "listen",
+    "observationQuestions": [
+      "책들은 왜 스스로 날아다닐까요?",
+      "책장이 넘어가는 소리를 들으면 무엇이 떠오르나요?"
+    ],
+    "desc": "공중에 떠 있는 책들이야. 잡으려고 하면 조금씩 물러나."
+  },
+  {
+    "id": "clue-vortex",
+    "name": "종이 소용돌이",
+    "category": "trace",
+    "assetId": "prop-story-vortex",
+    "inspectMode": "listen",
+    "observationQuestions": [
+      "소용돌이는 종이를 어디로 데려가는 걸까요?",
+      "빨려 들어간 이야기는 어떻게 될까요?"
+    ],
+    "desc": "종이들이 소용돌이처럼 돌고 있어. 가운데는 텅 비어 있어."
+  },
+  {
+    "id": "clue-projector",
+    "name": "낡은 프로젝터",
+    "category": "object",
+    "assetId": "prop-projector",
+    "inspectMode": "open",
+    "observationQuestions": [
+      "프로젝터가 마지막으로 비춘 장면은 무엇일까요?",
+      "레버를 당기면 무엇이 나타날까요?"
+    ],
+    "desc": "낡은 영사기야. 켜면 아무것도 없는 벽에 그림자만 비쳐."
+  },
+  {
+    "id": "clue-relation-board",
+    "name": "실로 이은 관계도",
+    "category": "character",
+    "assetId": "prop-relation-board",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "빨간 실은 누구와 누구를 잇고 있나요?",
+      "가운데 실루엣은 왜 비어 있을까요?"
+    ],
+    "desc": "사진들을 실로 이어 놓은 판이야. 실 하나가 끊어진 채로 늘어져 있어."
+  },
+  {
+    "id": "clue-emotion-flasks",
+    "name": "감정이 든 병",
+    "category": "object",
+    "assetId": "prop-emotion-flasks",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "누가 감정을 병에 담아 두었을까요?",
+      "비어 있는 병에는 어떤 감정이 들어 있었을까요?"
+    ],
+    "desc": "색이 다른 액체가 든 병들이야. 흔들면 색이 서로 섞였다가 다시 나뉘어."
+  },
+  {
+    "id": "clue-mirror-gate",
+    "name": "갈라진 거울",
+    "category": "place",
+    "assetId": "prop-mirror-gate",
+    "inspectMode": "rub",
+    "observationQuestions": [
+      "거울 양쪽의 풍경은 왜 다를까요?",
+      "거울 속으로 들어가면 어디에 도착할까요?"
+    ],
+    "desc": "금이 간 커다란 거울이야. 비친 방이 실제 방과 조금 달라."
+  },
+  {
+    "id": "clue-golden-gate",
+    "name": "빛나는 문",
+    "category": "place",
+    "assetId": "prop-golden-gate",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "문 너머의 빛은 어디에서 오는 걸까요?",
+      "이 문은 언제부터 열려 있었을까요?"
+    ],
+    "desc": "빛이 새어 나오는 문이야. 손잡이가 어디에도 없어."
+  },
+  {
+    "id": "clue-idea-easel",
+    "name": "생각 그림판",
+    "category": "record",
+    "assetId": "prop-idea-easel",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "누군가 그리다 만 그림은 무엇일까요?",
+      "전구 표시는 어떤 아이디어를 뜻할까요?"
+    ],
+    "desc": "무언가 그리다 만 그림판이야. 지운 자국이 여러 겹 남아 있어."
+  },
+  {
+    "id": "clue-bookshelf",
+    "name": "오래된 책장",
+    "category": "place",
+    "assetId": "prop-bookshelf",
+    "inspectMode": "slide",
+    "observationQuestions": [
+      "책장에서 한 권만 거꾸로 꽂혀 있다면 왜일까요?",
+      "가장 손때 묻은 책은 어떤 책일까요?"
+    ],
+    "desc": "천장까지 닿는 오래된 책장이야. 딱 한 칸만 비어 있어."
+  },
+  {
+    "id": "clue-crystals",
+    "name": "이야기 수정 조각",
+    "category": "object",
+    "assetId": "prop-structure-crystals",
+    "inspectMode": "rotate",
+    "observationQuestions": [
+      "수정 조각마다 다른 그림이 비치는 이유는 무엇일까요?",
+      "네 조각을 모으면 무슨 일이 일어날까요?"
+    ],
+    "desc": "반짝이는 수정 조각들이야. 맞춰 보면 어딘가 한 조각이 모자라."
+  },
+  {
+    "id": "clue-quest-path",
+    "name": "구불구불한 지도",
+    "category": "place",
+    "assetId": "prop-quest-path",
+    "inspectMode": "zoom",
+    "observationQuestions": [
+      "길 끝의 보물상자에는 무엇이 들어 있을까요?",
+      "길 위의 표시들은 누가 남겼을까요?"
+    ],
+    "desc": "구불구불 이어진 지도야. 길이 시작되는 곳에 표시가 없어."
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "page": 1,
+    "stage": 1,
+    "title": "저택 입장",
+    "subtitle": "어두운 저택을 손전등으로 탐색해요",
+    "bgId": "bg-p01-library",
+    "assets": [
+      "char-girl-crouch",
+      "char-puppy-sniff",
+      "prop-detective-bag",
+      "prop-wall-lantern",
+      "prop-curtain-window",
+      "prop-flashlight"
+    ],
+    "goalText": "마음에 드는 단서를 골라 가방에 담아 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "flip": true,
+      "dog": false,
+      "at": {
+        "x": 1230,
+        "y": 585,
+        "w": 340
+      },
+      "hello": "여기가 잉크저택이야! 가방은 오른쪽 위에 걸어 뒀어.",
+      "idleTip": "가방엔 여섯 개까지 담을 수 있어. 마음에 드는 걸로 골라!",
+      "done": "좋은 재료가 모였어! 이 단서들로 이야기를 만들 거야."
+    },
+    "steps": [
+      {
+        "label": "손전등을 움직여 저택을 비춰 봐"
+      },
+      {
+        "label": "반짝이는 곳을 누르고, 흙빛 자리는 문질러"
+      },
+      {
+        "label": "마음에 드는 단서를 오른쪽 위 가방으로 끌어다 넣어"
+      },
+      {
+        "label": "가방에는 여섯 개까지! 담은 단서가 네 이야기 재료가 돼"
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "stage": 1,
+    "title": "심층 탐색",
+    "subtitle": "단서를 검사대에 올려 자세히 살펴봐요",
+    "bgId": "bg-p02-lab",
+    "assets": [
+      "prop-compare-stand",
+      "char-puppy-sit",
+      "prop-magic-lens",
+      "prop-case-file"
+    ],
+    "goalText": "단서를 이리저리 살펴보고 관찰 메모를 남겨 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "flip": true,
+      "hello": "킁킁… 단서마다 살펴보는 방법이 달라! 물건 옆 둥근 버튼을 눌러 봐.",
+      "idleTip": "물건 양옆이나 아래에 둥근 버튼이 반짝여. 그걸 눌러 봐!",
+      "done": "관찰 완료! 넌 진짜 탐정 같아.",
+      "at": {
+        "x": 178,
+        "y": 872,
+        "w": 340
+      }
+    },
+    "steps": [
+      {
+        "label": "왼쪽에서 단서를 하나 골라"
+      },
+      {
+        "label": "물건 옆 둥근 버튼을 눌러 살펴봐"
+      },
+      {
+        "label": "오른쪽 노트에 본 걸 적어 줘"
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "stage": 2,
+    "title": "단서 해석실",
+    "subtitle": "관계있어 보이는 단서끼리 실로 이어요",
+    "bgId": "bg-p03-board",
+    "assets": [
+      "prop-round-device",
+      "char-girl-board",
+      "prop-relation-board",
+      "prop-clue-board"
+    ],
+    "goalText": "단서를 잇고, 왜 이었는지랑 네 가설을 적어 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "hello": "관계있어 보이는 단서 둘을 겹쳐 봐. 실로 이어져!",
+      "idleTip": "실 위 물음에 답을 적으면, 그게 이야기 한 토막이 돼.",
+      "done": "굉장한 추리야! 네 가설이 이야기의 씨앗이 될 거야.",
+      "flip": true,
+      "at": {
+        "x": 16,
+        "y": 500,
+        "w": 320,
+        "minW": 180
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "관계있어 보이는 단서를 끌어 다른 단서 위에 놓아"
+      },
+      {
+        "label": "실 위 물음에 답하면 이야기 재료가 하나 생겨"
+      },
+      {
+        "label": "저택에 무슨 일이 있었는지 가설 두 개를 적어"
+      }
+    ],
+    "stepsAt": {
+      "x": 210,
+      "y": 600
+    }
+  },
+  {
+    "page": 4,
+    "stage": 2,
+    "title": "이야기 씨앗 제작실",
+    "subtitle": "네 가지 재료를 혼합 장치에 넣어요",
+    "bgId": "bg-p04-workshop",
+    "assets": [
+      "prop-seed-machine",
+      "prop-four-vials",
+      "char-puppy-vials",
+      "prop-suspect-cards",
+      "prop-heart-flask",
+      "prop-locked-gate",
+      "prop-secret-amulet",
+      "prop-magic-card-girl",
+      "prop-seed-cabinet"
+    ],
+    "goalText": "주인공·소망·방해·비밀 네 칸을 채워 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "flip": true,
+      "hello": "이야기 씨앗을 만들 시간이야! 어떤 주인공이 좋을까?",
+      "idleTip": "둥근 소켓 4개를 눌러서 하나씩 채워 봐.",
+      "done": "씨앗 완성! 세상에 하나뿐인 조합이야.",
+      "at": {
+        "x": 16,
+        "y": 600,
+        "w": 320
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "빛나는 소켓을 눌러 재료를 골라"
+      },
+      {
+        "label": "카드를 그대로 써도, 바꿔 써도, 직접 만들어도 돼"
+      },
+      {
+        "label": "네 칸을 다 채우면 씨앗 카드가 완성돼"
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "stage": 3,
+    "title": "만약의 방",
+    "subtitle": "레버를 당겨 예상 밖의 사건을 만나요",
+    "bgId": "bg-p05-orrery",
+    "assets": [
+      "prop-whatif-machine",
+      "prop-question-orb",
+      "char-girl-whatif",
+      "prop-whatif-cards",
+      "prop-hourglass",
+      "prop-theater-masks",
+      "prop-story-chest"
+    ],
+    "goalText": "'만약에…' 사건을 뽑아 보고, 담을지 정해 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "hello": "이 방은 '만약에'의 방! 이야기가 뒤집힐지도 몰라.",
+      "idleTip": "오른쪽 금색 레버를 아래로 쭉 당겨 봐. 안 마음에 들면 또 당겨도 돼!",
+      "done": "오오, 그 사건을 고르다니! 이야기가 재밌어지겠는걸.",
+      "flip": true,
+      "at": {
+        "x": 20,
+        "y": 505,
+        "w": 350
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "금색 레버를 아래로 끝까지 당겨"
+      },
+      {
+        "label": "나타난 사건을 읽어 봐"
+      },
+      {
+        "label": "담을지, 다시 뽑을지, 직접 만들지 정해. 안 써도 괜찮아"
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "stage": 3,
+    "title": "이야기 뼈대 짜기",
+    "subtitle": "발단·전개·절정·결말 네 칸을 채워요",
+    "bgId": "bg-p06-frames",
+    "assets": [
+      "prop-scene-tree",
+      "char-puppy-scenes",
+      "prop-storyboard-easel",
+      "prop-structure-crystals",
+      "prop-branch-tree-2"
+    ],
+    "goalText": "네 단계에 무슨 일이 있을지 한 줄씩 적어 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "hello": "이야기엔 순서가 있어. 발단 → 전개 → 절정 → 결말!",
+      "idleTip": "빛나는 칸을 눌러서 한 줄만 적어 봐.",
+      "done": "이야기 뼈대 완성! 이제 진짜 글을 쓸 차례야.",
+      "flip": true,
+      "at": {
+        "x": 16,
+        "y": 470,
+        "w": 330
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "빛나는 칸을 눌러. 발단부터 차례로야"
+      },
+      {
+        "label": "그 단계에 무슨 일이 있을지 한 줄 적어"
+      },
+      {
+        "label": "네 칸을 모두 채우면 진짜 글을 쓰러 가"
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "stage": 4,
+    "title": "살아나는 글쓰기",
+    "subtitle": "단계마다 이야기를 이어 써요",
+    "bgId": "bg-p07-theater",
+    "assets": [
+      "char-girl-writing",
+      "prop-mini-theater",
+      "prop-emotion-flasks",
+      "char-puppy-badges",
+      "prop-world-globe"
+    ],
+    "goalText": "네 단계를 모두 써 줘",
+    "guide": {
+      "x": 1020,
+      "y": 872,
+      "flip": true,
+      "hello": "네 문장이 이 무대를 움직여! 편하게 써 봐.",
+      "idleTip": "글이 막히면 힌트 램프를 눌러 봐. 질문이 기다리고 있어.",
+      "done": "이야기가 살아 움직여! 네 문장 덕분이야.",
+      "at": {
+        "x": 16,
+        "y": 520,
+        "w": 320,
+        "minW": 215
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "빛나는 단계를 눌러"
+      },
+      {
+        "label": "오른쪽 노트에 이야기를 써"
+      },
+      {
+        "label": "막대를 채워 네 단계를 완성해"
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "stage": 4,
+    "title": "퇴고 전투",
+    "subtitle": "문장을 다듬어 잉크 괴물을 물리쳐요",
+    "bgId": "bg-p08-corrupted",
+    "assets": [
+      "prop-ink-vacuum",
+      "char-girl-mint",
+      "char-puppy-mint",
+      "prop-ink-vacuum-2",
+      "prop-emotion-masks",
+      "prop-idea-crystals"
+    ],
+    "goalText": "문장을 세 번 다듬어 잉크 오염을 걷어내 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "hello": "왼쪽 잉크 괴물이 네 원고를 노리고 있어!",
+      "idleTip": "가운데 글에서 아무 문장이나 눌러 봐. 고치면 괴물이 약해져.",
+      "done": "괴물을 물리쳤어! 원고가 반짝반짝해.",
+      "flip": true,
+      "at": {
+        "x": 14,
+        "y": 588,
+        "w": 300
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "가운데 글에서 고치고 싶은 문장을 눌러"
+      },
+      {
+        "label": "오른쪽에서 고치고 저장하기를 눌러"
+      },
+      {
+        "label": "고쳐 저장할 때마다 잉크 괴물이 물러나!"
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "stage": 5,
+    "title": "결말의 문",
+    "subtitle": "결말을 어떻게 맺을지 고르고 직접 써요",
+    "bgId": "bg-p09-doors",
+    "assets": [
+      "prop-golden-gate",
+      "prop-mystery-portal",
+      "prop-mirror-gate",
+      "prop-film-wreath",
+      "prop-question-orb",
+      "char-girl-endings",
+      "prop-crossroad-sign"
+    ],
+    "goalText": "네 결말을 직접 써 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "hello": "다섯 개의 문이 보여? 어떤 방식으로 끝낼지 골라 봐.",
+      "idleTip": "화면을 좌우로 쓸어 넘기면 다른 문이 보여.",
+      "done": "네가 만든 결말, 정말 기대돼!",
+      "flip": true,
+      "at": {
+        "x": 14,
+        "y": 545,
+        "w": 290
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "오른쪽 문을 좌우로 넘겨 봐"
+      },
+      {
+        "label": "마음에 드는 문에서 “이 문 고르기”를 눌러"
+      },
+      {
+        "label": "가운데 노트에 네 결말을 써. 안 골라도 바로 써도 돼"
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "stage": 5,
+    "title": "이야기 완성실",
+    "subtitle": "완성한 이야기를 책으로 만들어요",
+    "bgId": "bg-p10-bright",
+    "assets": [
+      "prop-book-press",
+      "badge-completion",
+      "badge-trophy",
+      "char-girl-holdpaper",
+      "char-puppy-book",
+      "prop-popup-book",
+      "prop-bookshelf",
+      "prop-flying-books",
+      "prop-book-pedestal"
+    ],
+    "goalText": "핸들을 돌려 책을 완성해 줘",
+    "guide": {
+      "x": 1150,
+      "y": 872,
+      "flip": true,
+      "hello": "드디어 마지막 방이야! 네 이야기를 책으로 만들자.",
+      "idleTip": "금색 원 위의 손잡이를 잡고 빙글빙글 돌려 봐.",
+      "done": "축하해, 작가님! 세상에 하나뿐인 책이 완성됐어.",
+      "at": {
+        "x": 20,
+        "y": 470,
+        "w": 310
+      },
+      "dog": false
+    },
+    "steps": [
+      {
+        "label": "책 제목을 정해"
+      },
+      {
+        "label": "핸들을 돌려 제본해"
+      },
+      {
+        "label": "저장하거나 인쇄해"
+      }
+    ]
+  }
+]

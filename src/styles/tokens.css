@@ -1,0 +1,128 @@
+/* 잉크저택 디자인 토큰 — samplepages 팔레트 실측 기반 */
+/*
+ * 셀프호스팅 폰트 (외부 요청 0 — 학교망 차단 대비)
+ * Jua: SIL OFL 1.1, Copyright 2018 The Jua Project Authors
+ * Pretendard: SIL OFL 1.1, Copyright 2021 Kil Hyung-jin (RFN 'Pretendard')
+ * 라이선스 원문: public/fonts/Jua-OFL.txt, public/fonts/Pretendard-OFL.txt
+ */
+/*
+ * Jua 는 원본 TTF(2MB) 대신 서브셋 woff2(약 140KB)를 쓴다.
+ * Jua 가 렌더하는 건 앱이 정한 고정 UI 문구뿐이고 학생 자유 입력은 전부 Pretendard 로
+ * 가므로, 소스에 등장하는 글자만 남겨도 깨지지 않는다. 첫 화면 전송량이 교실 와이파이에서
+ * 로딩 시간을 좌우해서 이 차이가 크다.
+ * 원본 TTF 는 재생성용으로 남겨 두되 참조하지 않는다. 갱신: npm run subset:fonts
+ */
+@font-face {
+  font-family: 'Jua';
+  src: url('/fonts/Jua-Subset.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  /* 서브셋(고빈도 3,510자, 234KB) — 원본 748KB 는 첫 로딩을 3초대까지 끌었다.
+     서브셋 밖 희귀 음절은 시스템 폰트로 폴백된다 (학생 글 커버리지 99%+) */
+  src: url('/fonts/Pretendard-Regular-Subset.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Bold-Subset.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* color */
+  --navy-900: #0a1228;
+  --navy-800: #0f1b3d;
+  --navy-700: #16264f;
+  --navy-600: #1f3264;
+  --purple-800: #2a1e46;
+  --purple-700: #3a2a5c;
+  --purple-500: #5c4485;
+  --gold-500: #e8b44a;
+  --gold-300: #f5d98a;
+  --gold-700: #b8862e;
+  --parchment: #e9dcc0;
+  --parchment-dim: #cdbf9f;
+  --ink: #241a3e;
+  --mint-500: #4fd6c0;
+  --mint-300: #8fecdd;
+  --danger: #d4645c;
+
+  /* 민트 확장 — 밝은 카드(직접 만들기 등) 배경과 그 위 글씨 */
+  --mint-100: #dff5ee;
+  --mint-200: #c8e8dd;
+  --mint-700: #2fa392;
+  --mint-800: #1d6b5c;
+
+  /* 양피지 위 갈색 글씨 (밝은 종이 톤과 짝) */
+  --ink-brown: #6b4a1a;
+  --ink-brown-dim: #795a2d;
+  --parchment-lite: #f3ecda;
+
+  /* text */
+  --text-hi: #f4ead2;
+  --text-mid: #cfc4a8;
+  --text-dim: #938a72;
+
+  /* typography */
+  /* 셀프호스팅 폰트 — 외부 요청 0. 학교망에서 차단돼도 그대로 뜬다. */
+  --font-body: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  /* 제목·버튼용 라운드체 */
+  --font-display: 'Jua', 'Pretendard', 'Malgun Gothic', sans-serif;
+  /*
+   * 고정 논리 px — #ui-overlay 가 1600×900 논리 캔버스로 통째 축척되므로
+   * (layout.css 참고) vw clamp 는 이중 축척 버그가 된다. 화면 크기 대응은
+   * --ov-scale 이 전담하고, 여기는 1600px 폭 기준 크기만 적는다.
+   * 예외: #rotate-guard 는 body 직속(비축척)이라 이 값이 실픽셀로 적용된다 — 그래도 적정.
+   */
+  --fs-xs: 17px;
+  --fs-sm: 19px;
+  --fs-md: 22px;
+  --fs-lg: 27px;
+  --fs-xl: 33px;
+  --fs-title: 44px;
+
+  /* space */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  /* radius / shadow */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --shadow-panel: 0 8px 28px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(245, 217, 138, 0.14);
+  --shadow-pop: 0 16px 48px rgba(0, 0, 0, 0.7);
+
+  /* touch — 논리 px. 터치 기기(pointer: coarse)에서는 components.css 가 64px 로 올린다
+     (태블릿 --ov-scale 0.6~0.8 에서 실 40~50px 확보) */
+  --touch-min: 48px;
+
+  /*
+   * z-index 6단 — 페이지 계층은 반드시 이 토큰만 쓴다 (숫자 직접 쓰기 금지).
+   * 역전 사고 방지: 모달은 배지팝·페이지인트로보다 위, 프롤로그·영상은 최상위,
+   * 토스트만 calc(+1)로 그 위에 뜬다. 컴포넌트 내부의 국소 겹침(닫기 버튼 등)은
+   * 페이지 계층이 아니므로 토큰 대상이 아니다.
+   */
+  --z-scene: 1;   /* Phaser 캔버스 */
+  --z-panel: 10;  /* 노트·트레이·뼈대 띠 등 장면 위 패널 */
+  --z-hud: 20;    /* 진행바·내비 버튼·강아지 말풍선 */
+  --z-overlay: 40; /* 페이지 인트로·배지 팝업 등 연출 */
+  --z-modal: 60;  /* 모달 — 연출보다 위 */
+  --z-top: 80;    /* 프롤로그·전체화면 영상·회전 안내 */
+}
+
+/* 후반부(P8~)는 골드 크롬을 유지하고 내용 강조색만 민트로 쓴다. */
+.stage-late {
+  --stage-accent: #58d9c4;
+  --stage-accent-soft: #a5f2e4;
+}

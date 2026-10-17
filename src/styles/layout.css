@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--navy-900);
+  font-family: var(--font-body);
+  color: var(--text-hi);
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  /* 한글 어절 단위 줄바꿈 — 개별 선언을 빠뜨린 요소도 기본으로 받는다 */
+  word-break: keep-all;
+}
+
+#game-shell {
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  background: var(--navy-900);
+}
+
+#phaser-root {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-scene);
+}
+
+#phaser-root canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*
+   * 오버레이는 항상 1600×900 논리 캔버스다. Phaser 장면과 똑같이 통째로 축척된다.
+   * 이전에는 실제 픽셀로 배치돼, 화면이 좁으면(폴드·고DPR 태블릿 ≈900px)
+   * left:360px 같은 상수가 화면 절반을 먹어 가운데 패널이 세로 기둥으로 뭉개졌다.
+   * --ov-scale 은 main.ts 의 ResizeObserver 가 shell 폭 / 1600 으로 넣는다.
+   */
+  width: 1600px;
+  height: 900px;
+  transform-origin: 0 0;
+  transform: scale(var(--ov-scale, 1));
+  z-index: calc(var(--z-scene) + 1);
+  pointer-events: none; /* 개별 요소에서 auto 로 활성화 */
+}
+
+#ui-overlay > * {
+  pointer-events: auto;
+}
+
+#ui-overlay input,
+#ui-overlay textarea,
+#ui-overlay select,
+#ui-overlay details,
+#ui-overlay .modal {
+  touch-action: auto;
+}
+
+/* 세로 모드 회전 안내 */
+#rotate-guard {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  #rotate-guard {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    /* 화면 전체를 덮는 안내 — 토스트까지 포함해 무엇보다 위 */
+    z-index: calc(var(--z-top) + 2);
+    background: var(--navy-900);
+    color: var(--text-hi);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--sp-4);
+    font-size: var(--fs-lg);
+    text-align: center;
+    padding: var(--sp-6);
+  }
+}
+
+/* 회전 안내용 스피너 — ⟳ 글자는 Jua 에 없어 폴백이 튀므로 CSS 로 그린다 */
+.rotate-spinner {
+  width: 44px;
+  height: 44px;
+  border: 5px solid rgba(232, 180, 74, 0.25);
+  border-top-color: var(--gold-300);
+  border-radius: 50%;
+  animation: rotate-spin 1.4s linear infinite;
+}
+
+@keyframes rotate-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 인쇄: 완성 원고만 */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-view,
+  #print-view * {
+    visibility: visible;
+  }
+  #print-view {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    color: #000;
+  }
+  html,
+  body {
+    overflow: visible;
+    height: auto;
+  }
+}

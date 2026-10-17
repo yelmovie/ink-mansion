@@ -1,0 +1,7 @@
+[
+  { "id": "end-resolve", "label": "해결되는 결말", "assetId": "prop-golden-gate", "strategy": "궁금했던 일의 답이 밝혀지고, 주인공이 원하던 것의 결과가 정해져요. 마지막 문장에서 주인공의 달라진 점을 보여 주면 좋아요." },
+  { "id": "end-open", "label": "열린 결말", "assetId": "prop-mystery-portal", "strategy": "모든 것을 다 말하지 않고, 한 가지 질문을 독자에게 남겨요. 독자가 이야기의 다음을 상상하게 만들어요." },
+  { "id": "end-twist", "label": "반전 결말", "assetId": "prop-mirror-gate", "strategy": "독자가 당연하다고 믿었던 것을 마지막에 뒤집어요. 반전의 실마리를 이야기 중간에 살짝 숨겨 두면 더 강력해져요." },
+  { "id": "end-loop", "label": "처음과 연결되는 결말", "assetId": "prop-film-wreath", "strategy": "이야기의 첫 장면·첫 물건·첫 문장이 마지막에 다시 나타나요. 같은 장면이라도 주인공의 마음은 달라져 있어요." },
+  { "id": "end-free", "label": "나만의 결말", "assetId": "prop-question-orb", "strategy": "어떤 방식에도 얽매이지 않아요. 내가 만든 이야기의 끝은 내가 정해요." }
+]

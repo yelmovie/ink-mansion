@@ -1,0 +1,667 @@
+{
+  "char-puppy-sit": {
+    "path": "/assets/char/char-puppy-sit.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-close": {
+    "path": "/assets/char/char-puppy-close.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 512,
+    "h": 768
+  },
+  "char-girl-crouch": {
+    "path": "/assets/char/char-girl-crouch.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-sniff": {
+    "path": "/assets/char/char-puppy-sniff.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-board": {
+    "path": "/assets/char/char-girl-board.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-vials": {
+    "path": "/assets/char/char-puppy-vials.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-whatif": {
+    "path": "/assets/char/char-girl-whatif.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-storyboard": {
+    "path": "/assets/char/char-girl-storyboard.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-scenes": {
+    "path": "/assets/char/char-puppy-scenes.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-writing": {
+    "path": "/assets/char/char-girl-writing.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-badges": {
+    "path": "/assets/char/char-puppy-badges.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-mint": {
+    "path": "/assets/char/char-girl-mint.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-mint": {
+    "path": "/assets/char/char-puppy-mint.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-endings": {
+    "path": "/assets/char/char-girl-endings.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-girl-holdpaper": {
+    "path": "/assets/char/char-girl-holdpaper.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "char-puppy-book": {
+    "path": "/assets/char/char-puppy-book.webp",
+    "type": "image",
+    "kind": "char",
+    "w": 768,
+    "h": 768
+  },
+  "prop-mansion-ext": {
+    "path": "/assets/objects/prop-mansion-ext.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-storybook": {
+    "path": "/assets/objects/prop-storybook.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-quill-magic": {
+    "path": "/assets/objects/prop-quill-magic.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-letter-sealed": {
+    "path": "/assets/objects/clue-letter-sealed.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-inkbottle-galaxy": {
+    "path": "/assets/objects/prop-inkbottle-galaxy.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-key-old": {
+    "path": "/assets/objects/clue-key-old.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-detective-bag": {
+    "path": "/assets/objects/prop-detective-bag.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-flashlight": {
+    "path": "/assets/objects/prop-flashlight.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-drawer-open": {
+    "path": "/assets/objects/clue-drawer-open.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-curtain-window": {
+    "path": "/assets/objects/prop-curtain-window.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-footprints": {
+    "path": "/assets/objects/clue-footprints.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-portrait-dog": {
+    "path": "/assets/objects/clue-portrait-dog.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-journal-open": {
+    "path": "/assets/objects/clue-journal-open.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-magic-lens": {
+    "path": "/assets/objects/prop-magic-lens.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-wall-lantern": {
+    "path": "/assets/objects/prop-wall-lantern.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-clue-board": {
+    "path": "/assets/objects/prop-clue-board.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-suspect-cards": {
+    "path": "/assets/objects/prop-suspect-cards.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "clue-keepsake-box": {
+    "path": "/assets/objects/clue-keepsake-box.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-round-device": {
+    "path": "/assets/objects/prop-round-device.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-compare-stand": {
+    "path": "/assets/objects/prop-compare-stand.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-projector": {
+    "path": "/assets/objects/prop-projector.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-case-file": {
+    "path": "/assets/objects/prop-case-file.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-seed-machine": {
+    "path": "/assets/objects/prop-seed-machine.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-magic-card-girl": {
+    "path": "/assets/objects/prop-magic-card-girl.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-heart-flask": {
+    "path": "/assets/objects/prop-heart-flask.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-locked-gate": {
+    "path": "/assets/objects/prop-locked-gate.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-secret-amulet": {
+    "path": "/assets/objects/prop-secret-amulet.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-four-vials": {
+    "path": "/assets/objects/prop-four-vials.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-seed-cabinet": {
+    "path": "/assets/objects/prop-seed-cabinet.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-whatif-machine": {
+    "path": "/assets/objects/prop-whatif-machine.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-hourglass": {
+    "path": "/assets/objects/prop-hourglass.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-signpost": {
+    "path": "/assets/objects/prop-signpost.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-theater-masks": {
+    "path": "/assets/objects/prop-theater-masks.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-story-chest": {
+    "path": "/assets/objects/prop-story-chest.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-whatif-cards": {
+    "path": "/assets/objects/prop-whatif-cards.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-question-orb": {
+    "path": "/assets/objects/prop-question-orb.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-idea-easel": {
+    "path": "/assets/objects/prop-idea-easel.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-storyboard-easel": {
+    "path": "/assets/objects/prop-storyboard-easel.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-quest-path": {
+    "path": "/assets/objects/prop-quest-path.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-crossroad-sign": {
+    "path": "/assets/objects/prop-crossroad-sign.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-structure-crystals": {
+    "path": "/assets/objects/prop-structure-crystals.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-relation-board": {
+    "path": "/assets/objects/prop-relation-board.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-story-vortex": {
+    "path": "/assets/objects/prop-story-vortex.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-mini-theater": {
+    "path": "/assets/objects/prop-mini-theater.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-world-globe": {
+    "path": "/assets/objects/prop-world-globe.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-emotion-flasks": {
+    "path": "/assets/objects/prop-emotion-flasks.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-ink-vacuum": {
+    "path": "/assets/objects/prop-ink-vacuum.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-branch-tree": {
+    "path": "/assets/objects/prop-branch-tree.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-emotion-masks": {
+    "path": "/assets/objects/prop-emotion-masks.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-idea-crystals": {
+    "path": "/assets/objects/prop-idea-crystals.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-ink-vacuum-2": {
+    "path": "/assets/objects/prop-ink-vacuum-2.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-branch-tree-2": {
+    "path": "/assets/objects/prop-branch-tree-2.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-golden-gate": {
+    "path": "/assets/objects/prop-golden-gate.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-mystery-portal": {
+    "path": "/assets/objects/prop-mystery-portal.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-mirror-gate": {
+    "path": "/assets/objects/prop-mirror-gate.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-film-wreath": {
+    "path": "/assets/objects/prop-film-wreath.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-scene-tree": {
+    "path": "/assets/objects/prop-scene-tree.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-bookshelf": {
+    "path": "/assets/objects/prop-bookshelf.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-popup-book": {
+    "path": "/assets/objects/prop-popup-book.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "badge-completion": {
+    "path": "/assets/objects/badge-completion.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-book-pedestal": {
+    "path": "/assets/objects/prop-book-pedestal.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-flying-books": {
+    "path": "/assets/objects/prop-flying-books.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-book-press": {
+    "path": "/assets/objects/prop-book-press.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "prop-shelf-return": {
+    "path": "/assets/objects/prop-shelf-return.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "badge-trophy": {
+    "path": "/assets/objects/badge-trophy.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "ui-title-logo": {
+    "path": "/assets/ui/ui-title-logo.webp",
+    "type": "image",
+    "kind": "title",
+    "w": 1024,
+    "h": 377
+  },
+  "bg-p01-library": {
+    "path": "/assets/bg/bg-p01-library.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p02-lab": {
+    "path": "/assets/bg/bg-p02-lab.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p03-board": {
+    "path": "/assets/bg/bg-p03-board.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p04-workshop": {
+    "path": "/assets/bg/bg-p04-workshop.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p05-orrery": {
+    "path": "/assets/bg/bg-p05-orrery.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p06-frames": {
+    "path": "/assets/bg/bg-p06-frames.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p07-theater": {
+    "path": "/assets/bg/bg-p07-theater.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p08-corrupted": {
+    "path": "/assets/bg/bg-p08-corrupted.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p09-doors": {
+    "path": "/assets/bg/bg-p09-doors.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "bg-p10-bright": {
+    "path": "/assets/bg/bg-p10-bright.webp",
+    "type": "image",
+    "kind": "bg",
+    "w": 1600,
+    "h": 900
+  },
+  "prop-ink-monster": {
+    "path": "/assets/objects/prop-ink-monster.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  },
+  "tex-parchment": {
+    "path": "/assets/ui/tex-parchment.webp",
+    "type": "image",
+    "kind": "title",
+    "w": 1024,
+    "h": 1024
+  },
+  "prop-whatif-lever": {
+    "path": "/assets/objects/prop-whatif-lever.webp",
+    "type": "image",
+    "kind": "obj",
+    "w": 512,
+    "h": 512
+  }
+}

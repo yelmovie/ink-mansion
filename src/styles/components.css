@@ -1,0 +1,304 @@
+/* ── 버튼 ── */
+.btn {
+  min-height: var(--touch-min);
+  min-width: var(--touch-min);
+  padding: 10px 22px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--gold-700);
+  background: linear-gradient(180deg, var(--navy-600), var(--navy-800));
+  color: var(--gold-300);
+  font-family: inherit;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--gold-700), 0 6px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.08s, box-shadow 0.08s, filter 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--gold-700), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn:disabled {
+  filter: grayscale(0.7) brightness(0.6);
+  cursor: default;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--gold-500), var(--gold-700));
+  color: var(--navy-900);
+  border-color: var(--gold-300);
+}
+
+.btn-ghost {
+  background: rgba(15, 27, 61, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+}
+
+.btn svg {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  fill: currentColor;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--mint-300);
+  outline-offset: 3px;
+}
+
+/* 터치 기기 최소 크기 — px 는 오버레이 논리 px 라 실픽셀 보장이 안 된다.
+   태블릿에서 --ov-scale ≈ 0.6~0.8 이므로 논리 64px ≈ 실 40~50px 로 잡는다. */
+@media (pointer: coarse) {
+  button,
+  .btn-sm,
+  .btn-plaque {
+    min-width: 64px !important;
+    min-height: 64px !important;
+  }
+}
+
+/* ── 패널 ── */
+.panel {
+  background: linear-gradient(160deg, rgba(22, 38, 79, 0.92), rgba(15, 27, 61, 0.94));
+  border: 1.5px solid rgba(232, 180, 74, 0.45);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-panel);
+  padding: var(--sp-4);
+  backdrop-filter: blur(6px);
+}
+
+.panel-title {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--gold-300);
+  margin: 0 0 var(--sp-2);
+  word-break: keep-all;
+}
+
+.panel-sub {
+  font-size: var(--fs-sm);
+  color: var(--text-mid);
+  margin: 0 0 var(--sp-3);
+  word-break: keep-all;
+  line-height: 1.5;
+}
+
+/* ── 입력 ── */
+.input,
+textarea.input {
+  width: 100%;
+  background: rgba(10, 18, 40, 0.8);
+  border: 1.5px solid var(--purple-500);
+  border-radius: var(--r-sm);
+  color: var(--text-hi);
+  font-family: inherit;
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  padding: 10px 12px;
+  resize: none;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(232, 180, 74, 0.2);
+}
+
+/* ── 헤더/네비 ── */
+.progress-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-4);
+  background: linear-gradient(180deg, rgba(10, 18, 40, 0.9), rgba(10, 18, 40, 0));
+  pointer-events: none;
+}
+
+.progress-header > * {
+  pointer-events: auto;
+}
+
+.ph-stage {
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  color: var(--gold-300);
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.ph-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ph-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-700), var(--gold-300));
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: var(--sp-3);
+  left: var(--sp-4);
+  right: var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.bottom-nav > * {
+  pointer-events: auto;
+}
+
+/* ── 모달 ── */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal); /* 배지팝·페이지인트로보다 위 */
+  animation: fade-in 0.18s ease;
+}
+
+.modal {
+  /* 오버레이(1600×900 논리 캔버스) 기준 상한 — 스크롤바 꾸밈은 ui-kit.css 에 */
+  max-width: 1500px;
+  max-height: 840px;
+  overflow-y: auto;
+  animation: pop-in 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes pop-in {
+  from { transform: scale(0.86); opacity: 0; }
+}
+
+/* ── 토스트 ── */
+.toast-wrap {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  /* 토스트는 프롤로그·전체화면 영상 위에도 떠야 한다 */
+  z-index: calc(var(--z-top) + 1);
+  pointer-events: none;
+}
+
+.toast {
+  background: rgba(22, 38, 79, 0.95);
+  border: 1px solid var(--gold-700);
+  color: var(--text-hi);
+  border-radius: var(--r-md);
+  padding: 10px 18px;
+  font-size: var(--fs-sm);
+  box-shadow: var(--shadow-pop);
+  animation: toast-in 0.25s ease;
+  word-break: keep-all;
+}
+
+@keyframes toast-in {
+  from { transform: translateY(-8px); opacity: 0; }
+}
+
+/* ── 자동저장 표시 ── */
+.autosave-dot {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.autosave-dot.show {
+  opacity: 1;
+}
+
+.autosave-dot.error {
+  color: #ffd0cc;
+  background: rgba(95, 24, 31, 0.9);
+  border: 1px solid var(--danger);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+
+/* ── 카드 ── */
+.card {
+  background: linear-gradient(165deg, var(--purple-700), var(--purple-800));
+  border: 1.5px solid var(--gold-700);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  color: var(--text-hi);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  word-break: keep-all;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card:hover,
+.card.selected {
+  border-color: var(--gold-300);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+.card.selected {
+  outline: 2px solid var(--gold-500);
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--purple-500);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

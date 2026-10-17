@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="태블릿 상호작용으로 단서를 탐색하고 서로 다른 이야기로 발전시키는 초등 국어 창의 글쓰기 방탈출 게임" />
+    <meta property="og:title" content="잉크저택" />
+    <meta property="og:description" content="같은 저택에서 시작하지만, 같은 이야기는 하나도 없다." />
+    <meta property="og:image" content="https://ink-mansion.vercel.app/og.png?v=2" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://ink-mansion.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0a1228" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
+    <!-- 첫 화면 병렬 프리로드: 폰트 3종 + 타이틀 에셋 4장.
+         없으면 Phaser 부팅(≈2s) 후에야 XHR 이 시작돼 타이틀이 5초대에 뜬다 -->
+    <link rel="preload" href="/fonts/Jua-Subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Pretendard-Regular-Subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Pretendard-Bold-Subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/bg/bg-p01-library.webp" as="image" />
+    <link rel="preload" href="/assets/ui/ui-title-logo.webp" as="image" />
+    <link rel="preload" href="/assets/char/char-girl-crouch.webp" as="image" />
+    <link rel="preload" href="/assets/char/char-puppy-sniff.webp" as="image" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <title>잉크저택</title>
+  </head>
+  <body>
+    <div id="game-shell">
+      <div id="phaser-root"></div>
+      <div id="ui-overlay"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

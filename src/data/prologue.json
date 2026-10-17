@@ -1,0 +1,26 @@
+{
+  "note": "동기 유발용 프롤로그. 상황만 제시하고 '무엇을 쓸지'는 절대 정해 주지 않는다 (PRD P3 정답 서사 금지). 첫 실행에 1회 자동 재생하고, 설정에서 다시 볼 수 있다.",
+  "mission": "이야기를 완성해 잉크저택을 되살려 주세요!",
+  "cuts": [
+    {
+      "assetId": "prop-mansion-ext",
+      "text": "옛날 이 저택에는 수많은 이야기가 살고 있었어."
+    },
+    {
+      "assetId": "prop-inkbottle-galaxy",
+      "text": "그런데 어느 날부터 잉크가 마르기 시작했어."
+    },
+    {
+      "assetId": "prop-storybook",
+      "text": "책 속의 이야기가 한 줄씩 사라지고 있어. 아무도 되돌릴 수 없대."
+    },
+    {
+      "assetId": "char-puppy-sniff",
+      "text": "방법은 하나야. 누군가 새 이야기를 써 주는 것."
+    },
+    {
+      "assetId": "char-girl-crouch",
+      "text": "저택 곳곳에 단서가 흩어져 있어.\n네 이야기 한 편이면 저택이 다시 살아나!"
+    }
+  ]
+}
