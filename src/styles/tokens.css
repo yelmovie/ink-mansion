@@ -81,9 +81,10 @@
    * --ov-scale 이 전담하고, 여기는 1600px 폭 기준 크기만 적는다.
    * 예외: #rotate-guard 는 body 직속(비축척)이라 이 값이 실픽셀로 적용된다 — 그래도 적정.
    */
-  --fs-xs: 17px;
-  --fs-sm: 19px;
-  --fs-md: 22px;
+  /* 1280 태블릿(--ov-scale 0.8)에서 본문 16px 이상 — xs 21→16.8 실픽셀 (2026-10-18 플레이 점검) */
+  --fs-xs: 21px;
+  --fs-sm: 22px;
+  --fs-md: 24px;
   --fs-lg: 27px;
   --fs-xl: 33px;
   --fs-title: 44px;
@@ -103,9 +104,9 @@
   --shadow-panel: 0 8px 28px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(245, 217, 138, 0.14);
   --shadow-pop: 0 16px 48px rgba(0, 0, 0, 0.7);
 
-  /* touch — 논리 px. 터치 기기(pointer: coarse)에서는 components.css 가 64px 로 올린다
-     (태블릿 --ov-scale 0.6~0.8 에서 실 40~50px 확보) */
-  --touch-min: 48px;
+  /* touch — 논리 px. 1280 태블릿(--ov-scale 0.8)에서 실 44.8px.
+     터치 기기(pointer: coarse)에서는 components.css 가 64px 로 올린다 */
+  --touch-min: 56px;
 
   /*
    * z-index 6단 — 페이지 계층은 반드시 이 토큰만 쓴다 (숫자 직접 쓰기 금지).

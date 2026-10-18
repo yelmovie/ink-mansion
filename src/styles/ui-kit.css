@@ -752,6 +752,7 @@
   font-size: var(--fs-xs);
   margin: 0 0 4px;
   opacity: 0.82;
+  white-space: pre-line; /* P7 힌트 둘째 줄 "지금 N자 · 문이 열리려면 400자" */
 }
 
 .pad-field { display: block; }
@@ -765,7 +766,14 @@
   margin: 4px 0 3px;
 }
 
-/* 참고용 예시 — 학생 글보다 확실히 흐리고 작게. 베낄 것이 아니라 눈대중용이다 */
+/* 참고용 예시 — 접어 두고 '예시 보기'를 눌러야 펼쳐진다. 글자를 키운 뒤 노트가 넘치지 않게 */
+.writing-pad .pad-example-fold > summary {
+  background: rgba(160, 122, 58, 0.14);
+  border: 1px solid rgba(120, 88, 40, 0.45);
+  color: #6b4a1a;
+  margin: 2px 0;
+}
+
 .pad-example {
   display: block;
   font-size: var(--fs-xs);
@@ -834,7 +842,7 @@ input.pad-input {
 }
 
 .pad-action {
-  min-height: 38px;
+  min-height: var(--touch-min);
   padding: 5px 12px;
   font-size: var(--fs-sm);
 }
@@ -1139,7 +1147,7 @@ input.pad-input {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 38px;
+  min-height: var(--touch-min);
   padding: 5px 14px;
   border-radius: 999px;
   background: linear-gradient(170deg, #22376b, #0d1836);
@@ -1246,7 +1254,7 @@ input.pad-input {
 .btn:disabled { filter: grayscale(0.7) brightness(0.55); cursor: default; }
 .btn svg { width: 1.1em; height: 1.1em; vertical-align: -0.18em; fill: currentColor; }
 
-.btn-sm { min-height: 38px; padding: 5px 12px; font-size: var(--fs-sm); }
+.btn-sm { min-height: var(--touch-min); padding: 5px 12px; font-size: var(--fs-sm); }
 
 .btn-primary {
   background: linear-gradient(178deg, #f7dd8f 0%, #e8b44a 45%, #c08a2a 100%);
@@ -1409,8 +1417,8 @@ input.pad-input {
   position: absolute;
   top: 6px;
   right: 8px;
-  width: 34px;
-  height: 34px;
+  width: var(--touch-min);
+  height: var(--touch-min);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1423,7 +1431,7 @@ input.pad-input {
   transition: filter 0.15s, transform 0.08s;
 }
 
-.pad-expand svg { width: 19px; height: 19px; }
+.pad-expand svg { width: 24px; height: 24px; }
 .pad-expand:hover { filter: brightness(1.12); }
 .pad-expand:active { transform: translateY(1px); }
 
@@ -1472,7 +1480,7 @@ input.pad-input {
 .pad-saved {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   color: #7a6136;
   opacity: 0.55;
   margin: -2px 0 4px;
@@ -1498,7 +1506,7 @@ input.pad-input {
   box-shadow: none;
   font-size: var(--fs-xs); /* 16px 하한 */
   font-weight: 700;
-  min-height: 34px;
+  min-height: var(--touch-min);
   padding: 4px 12px;
   border-radius: 7px;
 }

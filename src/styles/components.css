@@ -40,7 +40,7 @@
 }
 
 .btn-sm {
-  min-height: 36px;
+  min-height: var(--touch-min);
   padding: 6px 14px;
   font-size: var(--fs-sm);
 }

@@ -217,7 +217,7 @@ const mod: PageModule = {
               const on = row.scene.id === currentSceneId;
               const cue = i === focusIdx ? 'animation:gold-pulse 1.4s ease-in-out infinite' : on ? '' : 'opacity:.55';
               return `<button class="btn btn-sm ${on ? 'btn-primary' : 'btn-ghost'}" data-scene="${escapeHtml(row.scene.id)}"
-                  style="flex:1;min-height:44px;padding:4px 6px;display:flex;flex-direction:column;justify-content:center;gap:4px;word-break:keep-all;${cue}">
+                  style="flex:1;min-height:var(--touch-min);padding:4px 6px;display:flex;flex-direction:column;justify-content:center;gap:4px;word-break:keep-all;${cue}">
                   <span style="font-size:var(--fs-xs);font-weight:800;line-height:1.1">${escapeHtml(row.stage.label)}${done ? ' ✓' : ''}</span>
                   <span class="gauge-track" style="width:100%;height:6px;border-radius:3px;border-width:1px">
                     <span class="gauge-fill ${done ? 'stable' : ''}" style="display:block;width:${pct(row.chars, row.stage.targetChars)}%${done ? '' : FILL_GOLD}"></span>
@@ -238,7 +238,7 @@ const mod: PageModule = {
           ${tags
             .map(
               (t) =>
-                `<button class="btn btn-sm ${scene?.tag === t.id ? 'btn-primary' : 'btn-ghost'}" data-tag="${escapeHtml(t.id)}" style="min-height:34px;padding:4px 10px">${escapeHtml(t.label)}</button>`,
+                `<button class="btn btn-sm ${scene?.tag === t.id ? 'btn-primary' : 'btn-ghost'}" data-tag="${escapeHtml(t.id)}" style="padding:4px 10px">${escapeHtml(t.label)}</button>`,
             )
             .join('')}
         </div>
@@ -299,12 +299,19 @@ const mod: PageModule = {
       if (withPad) renderPad();
     };
 
-    /** 노트를 다시 그리지 않고 힌트의 "남은 글자 수"만 갈아 끼운다 */
+    /** 단계 질문 + "지금 N자 · 문이 열리려면 400자" — 얼마나 더 써야 하는지 숫자로 보여 준다 (업체 피드백) */
+    const hintFor = (row: StageRow) => {
+      const total = totalChars(stageRows());
+      const left = total >= MIN_TOTAL ? ' · 문이 열렸어요' : ` · 문이 열리려면 ${MIN_TOTAL}자`;
+      return `${row.stage.ask}${row.chars >= row.stage.targetChars ? ' · 충분히 썼어요' : ''}
+지금 ${total}자${left}`;
+    };
+    /** 노트를 다시 그리지 않고 힌트의 글자 수만 갈아 끼운다 */
     const syncPadHint = () => {
       const row = stageRows().find((r) => r.scene.id === currentSceneId);
       const hint = dom.querySelector('.writing-pad .pad-hint') as HTMLElement | null;
       if (!row || !hint) return;
-      hint.textContent = `${row.stage.ask}${row.chars >= row.stage.targetChars ? ' · 충분히 썼어요, 더 써도 좋아요' : ''}`;
+      hint.textContent = hintFor(row);
     };
 
     // 제목과 본문은 다른 페이지와 똑같이 오른쪽 노트에서 쓴다.
@@ -315,9 +322,7 @@ const mod: PageModule = {
         // 노트 제목은 단계 라벨 — 지금 어느 단계를 쓰는 중인지가 제일 먼저 보여야 한다.
         title: row ? row.stage.label : '이야기 노트',
         // 숫자로 부담 주지 않는다 — 분량은 게이지와 "문이 열린다" 규칙이 대신 말한다.
-        hint: row
-          ? `${row.stage.ask}${row.chars >= row.stage.targetChars ? ' · 충분히 썼어요, 더 써도 좋아요' : ''}`
-          : '쓴 글은 자동으로 저장돼요. 정답은 없어요.',
+        hint: row ? hintFor(row) : '쓴 글은 자동으로 저장돼요. 정답은 없어요.',
         fields: currentSceneId
           ? [
               {

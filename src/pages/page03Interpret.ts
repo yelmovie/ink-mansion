@@ -138,7 +138,9 @@ class InterpretScene extends BaseScene {
         const target = this.hitOther(node);
         if (target) {
           this.connect(clueId, target);
-          this.tweens.add({ targets: node, x: node.x - 46, y: node.y - 34, duration: 220 });
+          // 끌던 카드를 원래 자리로 되돌린다 — 겹친 채 두면 실이 안 보이고 학생은 카드가 사라졌다고 느낀다
+          const home = node.input!;
+          this.tweens.add({ targets: node, x: home.dragStartX, y: home.dragStartY, duration: 260, ease: 'Back.Out', onUpdate: () => this.redraw() });
         }
         this.redraw();
       });

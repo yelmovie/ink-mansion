@@ -167,7 +167,7 @@ export function updatePad(cfg: PadConfig): void {
             .map(
               (f) => `<label class="pad-field">
                 ${f.label ? `<span class="pad-label">${f.label}</span>` : ''}
-                ${f.example ? `<span class="pad-example">예시 — ${f.example}</span>` : ''}
+                ${f.example ? `<details class="fold pad-example-fold"><summary>예시 보기</summary><span class="pad-example">${f.example}</span></details>` : ''}
                 ${
                   f.single
                     ? `<input class="paper-editor pad-input" data-pad-field="${f.id}" placeholder="${f.placeholder ?? ''}">`
