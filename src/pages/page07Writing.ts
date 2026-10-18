@@ -48,7 +48,7 @@ const STRUCTURE_LABELS: Record<string, string> = {
 };
 const storyStages = storyStagesData as { targetTotalChars: number; minTotalChars: number; stages: StoryStage[] };
 const TOTAL_TARGET = storyStages.targetTotalChars;
-/** 통과 최소치 — 목표는 게이지로만 권하고, 문은 이 선만 넘으면 연다 (업체 피드백 0825) */
+/** 통과 최소치 — 네 단계를 모두 쓴 뒤 이 선을 넘으면 연다. 목표는 게이지로만 권한다. */
 const MIN_TOTAL = storyStages.minTotalChars;
 /** 목표 미달일 때 쓰는 골드 막대 — ui-kit 의 .hp/.stable 은 보라/민트라 "아직 쓰는 중"과 색이 맞지 않는다 */
 const FILL_GOLD = ';background:linear-gradient(90deg,#a9761f,#e8b44a)';
@@ -82,6 +82,18 @@ function stageRows(): StageRow[] {
 
 function totalChars(rows: StageRow[]): number {
   return rows.reduce((sum, row) => sum + row.chars, 0);
+}
+
+/** 힌트·완료 표시·다음 방 이동이 같은 조건으로 문을 연다. */
+function writingProgress(rows = stageRows()): { total: number; blocked: string | null } {
+  const total = totalChars(rows);
+  const empty = storyStages.stages.find((stage) => !rows.some((row) => row.stage.id === stage.id && row.chars > 0));
+  const blocked = empty
+    ? `지금 ${total}자 · ‘${empty.label}’에도 조금 써 볼까요?`
+    : total < MIN_TOTAL
+      ? `지금 ${total}자예요. 문이 열리려면 ${MIN_TOTAL}자까지 ${MIN_TOTAL - total}자 더 써 볼까요?`
+      : null;
+  return { total, blocked };
 }
 
 /** 0~100 으로 자른 달성률 — 넘겨 써도 막대만 가득 찰 뿐 제한하지 않는다 */
@@ -203,9 +215,9 @@ const mod: PageModule = {
         .filter((name): name is string => Boolean(name));
       const activeTag = scene?.tag ? tags.find((tag) => tag.id === scene.tag) : undefined;
       const rows = stageRows();
-      const total = totalChars(rows);
+      const { total, blocked } = writingProgress(rows);
       // '문이 열려요'는 실제 통과 조건(네 단계 + 최소치)과 같은 기준 — 게이지 채움만 A4 목표로 잰다
-      const totalDone = total >= MIN_TOTAL && rows.length > 0 && rows.every((row) => row.chars > 0);
+      const totalDone = blocked === null;
       // 아직 목표에 못 미친 첫 단계에만 골드 펄스를 준다 — 다 채우면 하이라이트가 저절로 다음 단계로 넘어간다
       const focusIdx = rows.findIndex((row) => row.chars < row.stage.targetChars);
       const currentStage = rows.find((row) => row.scene.id === currentSceneId)?.stage;
@@ -299,12 +311,11 @@ const mod: PageModule = {
       if (withPad) renderPad();
     };
 
-    /** 단계 질문 + "지금 N자 · 문이 열리려면 400자" — 얼마나 더 써야 하는지 숫자로 보여 준다 (업체 피드백) */
+    /** 빈 단계를 먼저 안내하고, 네 단계를 모두 썼으면 남은 분량을 알려 준다. */
     const hintFor = (row: StageRow) => {
-      const total = totalChars(stageRows());
-      const left = total >= MIN_TOTAL ? ' · 문이 열렸어요' : ` · 문이 열리려면 ${MIN_TOTAL}자`;
+      const { total, blocked } = writingProgress();
       return `${row.stage.ask}${row.chars >= row.stage.targetChars ? ' · 충분히 썼어요' : ''}
-지금 ${total}자${left}`;
+${blocked ?? `지금 ${total}자 · 문이 열렸어요`}`;
     };
     /** 노트를 다시 그리지 않고 힌트의 글자 수만 갈아 끼운다 */
     const syncPadHint = () => {
@@ -371,12 +382,7 @@ const mod: PageModule = {
   canGoNext() {
     // 네 단계 모두 쓰고 통과 최소치만 넘으면 문이 열린다.
     // A4 한 장 목표는 게이지가 권할 뿐 진행을 막지 않는다 (업체 피드백 0825).
-    // 화면에는 숫자를 쓰지 않는다 — 막는 말도 저택의 말투로 한다.
-    const rows = stageRows();
-    const empty = rows.find((row) => row.chars === 0);
-    if (empty) return `‘${empty.stage.label}’에도 조금 써 볼까요?`;
-    if (totalChars(rows) < MIN_TOTAL) return '글이 아직 짧아서 잉크저택 문이 열리지 않아요. 이야기를 조금 더 들려줘요!';
-    return null;
+    return writingProgress().blocked;
   },
   goal() {
     // 상단 카운터도 분량 기준으로 — "얼마나 써야 하나"에 숫자로 답한다.
