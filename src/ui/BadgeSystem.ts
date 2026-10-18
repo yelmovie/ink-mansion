@@ -53,7 +53,6 @@ export function showBadgePopup(def: BadgeDef): void {
   pop.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') close();
   });
-  setTimeout(close, 6000);
   overlay.appendChild(pop);
   pop.focus();
 }
